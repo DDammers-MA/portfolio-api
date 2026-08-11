@@ -39,7 +39,6 @@
 
 # # Run it
 # CMD $BUILD_DIR/run.sh
-
 FROM ortussolutions/commandbox:lucee5
 
 WORKDIR /app
@@ -51,4 +50,4 @@ COPY . .
 
 EXPOSE 10000
 
-CMD ["sh", "-c", "box server start port=${PORT:-10000} host=0.0.0.0 heapSize=300 minHeapSize=128 --console"]
+CMD ["box", "server", "start", "port=10000", "host=0.0.0.0", "heapSize=300", "minHeapSize=128", "--console"]
