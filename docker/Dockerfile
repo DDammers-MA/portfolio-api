@@ -39,15 +39,14 @@
 
 # # Run it
 # CMD $BUILD_DIR/run.sh
-FROM ortussolutions/commandbox:lucee5
+FROM ortussolutions/commandbox
 
 WORKDIR /app
 
-COPY box.json .
-RUN box install --production
+COPY . /app
 
-COPY . .
+RUN box install
 
-EXPOSE 10000
+EXPOSE 8080
 
-CMD ["box", "server", "start", "port=10000", "host=0.0.0.0", "heapSize=300", "minHeapSize=128", "--console"]
+CMD ["box", "server", "start", "port=8080", "host=0.0.0.0"]
