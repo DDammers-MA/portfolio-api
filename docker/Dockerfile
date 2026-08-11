@@ -44,13 +44,11 @@ FROM ortussolutions/commandbox:lucee5
 
 WORKDIR /app
 
-# Install dependencies first (better layer caching)
 COPY box.json .
 RUN box install --production
 
-# Copy the rest of the app
 COPY . .
 
 EXPOSE 10000
 
-CMD ["sh", "-c", "box server start port=${PORT:-10000} host=0.0.0.0 --console"]
+CMD ["sh", "-c", "box server start port=${PORT:-10000} host=0.0.0.0 heapSize=300 minHeapSize=128 --console"]
