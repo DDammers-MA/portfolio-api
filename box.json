@@ -1,0 +1,66 @@
+{
+    "name":"portfolio-api",
+    "version":"1.0.0",
+    "location":"forgeboxStorage",
+    "author":"You",
+    "slug":"portfolio-api",
+    "createPackageDirectory":false,
+    "type":"mvc",
+    "homepage":"https://github.com/coldbox-templates/rest",
+    "documentation":"https://github.com/coldbox-templates/rest",
+    "repository":{
+        "type":"git",
+        "url":"https://github.com/coldbox-templates/rest"
+    },
+    "bugs":"https://github.com/coldbox-templates/rest/issues",
+    "shortDescription":"This template gives you the base for building RESTFul web services with ColdBox",
+    "contributors":[],
+    "ignore":[],
+    "devDependencies":{
+        "testbox":"^6.0.0",
+        "relax":"^4.1.0",
+        "route-visualizer":"*",
+        "commandbox-boxlang":"*"
+    },
+    "dependencies":{
+        "coldbox":"^8.0.0",
+        "cbsecurity":"^3.0.0",
+        "mementifier":"^3.3.0",
+        "cbvalidation":"^4.1.0",
+        "qb":"10.0.1",
+        "BCrypt":"^3.1.0+4",
+        "cborm":"^4.5.0+2",
+        "quick":"^11.1.0",
+        "cors":"^3.0.9",
+        "cbauth":"^7.0.0",
+        "cbmailservices":"^2.9.0+3"
+    },
+    "installPaths":{
+        "coldbox":"coldbox/",
+        "testbox":"testbox/",
+        "relax":"modules/relax/",
+        "cbsecurity":"modules/cbsecurity/",
+        "route-visualizer":"modules/route-visualizer/",
+        "mementifier":"modules/mementifier/",
+        "cbvalidation":"modules/cbvalidation/",
+        "qb":"modules/qb/",
+        "BCrypt":"modules/BCrypt/",
+        "cborm":"modules/cborm/",
+        "quick":"modules/quick/",
+        "cors":"modules/cors/",
+        "cbauth":"modules/cbauth/",
+        "cbmailservices":"modules/cbmailservices/"
+    },
+    "scripts":{
+        "postInstall":"pathExists .env || cp .env.example .env && package set ignore=[]",
+        "format":"cfformat run config/,handlers/,interceptors/,models/,modules_app/,tests/specs/,*.cfc ./.cfformat.json --overwrite",
+        "format:check":"cfformat check config/,handlers/,interceptors/,models/,modules_app/,tests/specs/,*.cfc ./.cfformat.json",
+        "format:watch":"cfformat watch path='config/,handlers/,interceptors/,models/,modules_app/,tests/specs/,*.cfc' settingsPath='.cfformat.json'",
+        "docker:build":"!docker build --no-cache -t my-coldbox-app -f ./docker/Dockerfile ./",
+        "docker:run":"!docker run -it -p 8080:8080 my-coldbox-app",
+        "docker:bash":"!docker run -it my-coldbox-app /bin/bash",
+        "docker:stack":"!docker compose -f docker/docker-compose.yaml ${1}"
+    },
+    "language":"CFML",
+    "description":"A ColdBox Application created with the ColdBox CLI"
+}

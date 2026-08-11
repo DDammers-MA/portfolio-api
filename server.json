@@ -1,0 +1,15 @@
+{
+    "app":{
+        "cfengine":"lucee@5"
+    },
+    "name":"portfolio-api",
+    "openbrowser":"true",
+    "web":{
+        "http":{
+            "port":"8081"
+        },
+        "rewrites":{
+            "enable":true
+        }
+    }
+}
