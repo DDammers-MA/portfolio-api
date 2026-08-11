@@ -11,7 +11,7 @@ component {
 	 * Application Properties: Modify as you see fit!
 	 * --------------------------------------------------------------------------
 	 */
-	this.name                 = "My ColdBox Application";
+	this.name                 = "portfolioAPI";
 	this.sessionManagement    = true;
 	this.sessionTimeout       = createTimespan( 0, 1, 0, 0 );
 	this.setClientCookies     = true;
@@ -65,7 +65,19 @@ component {
 	 * --------------------------------------------------------------------------
 	 * ORM + Datasource Settings
 	 * --------------------------------------------------------------------------
+	 * Built from environment variables so the same codebase points at Strato
+	 * in production and a local DB in development, without editing this file.
+	 * This MUST live in the pseudo-constructor (here, not inside a function)
+	 * so Lucee registers it before the first request runs.
 	 */
+	this.datasources[ "portfolio" ] = {
+		type     : "MySQL",
+		host     : server.system.environment.DB_HOST     ?: "database-5021167267.webspace-host.com",
+		port     : server.system.environment.DB_PORT     ?: "3306",
+		database : server.system.environment.DB_DATABASE ?: "dbs15996720",
+		username : server.system.environment.DB_USER     ?: "dbu628694",
+		password : server.system.environment.DB_PASSWORD ?: "%)f5usteUz1$I4a"
+	};
 	this.datasource = "portfolio";
 
 	/**
