@@ -49,4 +49,4 @@ RUN box install
 
 EXPOSE 8080
 
-CMD ["box", "server", "start", "port=8080", "host=0.0.0.0"]
+CMD echo "Starting on PORT=${PORT}" && box server start port=${PORT:-8080} host=0.0.0.0 console=true --force
