@@ -54,6 +54,6 @@
 FROM ortussolutions/commandbox:lucee5
 WORKDIR /app
 COPY . .
-RUN box install
+RUN box install --production
 EXPOSE 3000
 CMD ["box", "server", "start", "--console"]
