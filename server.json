@@ -5,6 +5,7 @@
     "name":"portfolio-api",
     "openbrowser":"false",
     "web":{
+        "host": "0.0.0.0",
         "http": {
             "port": "${PORT:8080}"
         },
