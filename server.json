@@ -3,11 +3,11 @@
         "cfengine":"lucee@5"
     },
     "name":"portfolio-api",
-    "openbrowser":"true",
+    "openbrowser":"false",
     "web":{
         "http": {
-      "port": "${env.PORT:-3000}"
-    },
+            "port": "${PORT:8080}"
+        },
         "rewrites":{
             "enable":true
         }
