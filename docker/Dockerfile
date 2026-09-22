@@ -52,8 +52,13 @@
 # # CMD box server start port=${PORT:-8080} host=0.0.0.0 console=true --force
 
 FROM ortussolutions/commandbox:lucee5
+
 WORKDIR /app
+
 COPY . .
+
 RUN box install --production
+
 EXPOSE 3000
-CMD ["box", "server", "start", "--console"]
+
+CMD ["box", "server", "start", "port=3000", "host=0.0.0.0", "--console"]
