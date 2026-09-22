@@ -8,7 +8,7 @@
  * It also leverages several delegates for Validation, Population, Authentication, Authorization and JWT Subject.
  */
 component
-	table = "Frameworks"
+	table = "frameworks"
 	accessors     ="true"
     extends="quick.models.BaseEntity"
 	transientCache="false"

@@ -5,7 +5,9 @@
     "name":"portfolio-api",
     "openbrowser":"true",
     "web":{
-  
+        "http": {
+      "port": "${env.PORT:-3000}"
+    },
         "rewrites":{
             "enable":true
         }
