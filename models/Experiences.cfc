@@ -22,9 +22,7 @@ component
 {
 	property name="wirebox" inject="wirebox" persistent="false";
 	property name="id" fieldtype="id";
-   
-  
-   property name="id";     
+    
     property name="role"; 
     property name="company";    
     property name="description";
