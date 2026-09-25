@@ -5,9 +5,9 @@
     "name":"portfolio-api",
     "openbrowser":"false",
     "web":{
-        "host": "0.0.0.0",
-        "http": {
-             "port": 3000
+        "host":"0.0.0.0",
+        "http":{
+            "port":8081
         },
         "rewrites":{
             "enable":true

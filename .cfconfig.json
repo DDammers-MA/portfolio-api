@@ -6,6 +6,7 @@
 	"requestTimeoutEnabled":true,
 	"requestTimeout":"0,0,5,0",
 	"robustExceptionEnabled":true,
+	"adminPassword": "commandbox",
     "caches":{
 		"coldbox":{
 			"storage":"true",
